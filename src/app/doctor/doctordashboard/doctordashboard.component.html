@@ -1,0 +1,45 @@
+<!-- <app-header></app-header> -->
+<div class="container">
+    <div class="header">
+        <div class="form-control">
+            <input class="form-control" type="text" placeholder="search text" >
+            
+        </div><br>
+
+        <!-- <a [routerLink]="['../emp-Add']" class="btn btn-outline-secondary" style="float:right; margin-bottom:10px;">AddEmp</a> -->
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="text-center">
+            <tr>
+                <th>TokenNo</th>
+                <th>AppoinmentID</th>
+                <th>PatientId</th>
+                <th>PatientName</th>
+                <th>Mobile</th>
+              
+
+            </tr>
+
+
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let doc of dash ">
+                <td>{{doc.TokenNo}}</td>
+                <td>{{doc.AppointmentId}}</td>
+                <td>{{doc.PatientId}}</td>
+                <td>{{doc.PatientName}}</td>
+                <td>{{doc.Mobile}}</td>
+                <td>
+                    <button class="btn btn-info" (click) = "viewpatient(doc.PatientId,doc.PatientName,doc.AppointmentId)">View</button> 
+                    
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+
+    <!-- <div class="footer">
+        <pagination-controls (pageChange)="page=($event)"></pagination-controls>
+    </div> -->
+</div>

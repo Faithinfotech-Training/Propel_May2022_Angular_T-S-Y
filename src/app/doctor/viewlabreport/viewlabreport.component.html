@@ -1,0 +1,38 @@
+<body>
+<div >
+    <div class="header">
+        <!-- <a [routerLink]="['../emp-Add']" class="btn btn-outline-secondary" style="float:right; margin-bottom:10px;">AddEmp</a> -->
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="text-center">
+            <tr>
+                <th>PatientName</th>
+                <th>TestName</th>
+                <th>HighRange</th>
+                <th>LowRange</th>
+                <th>NormalRange</th>
+              
+
+            </tr>
+
+
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let labv of DoctorviewlabService.labview">
+                <td>{{labv.PatientName}}</td>
+                <td>{{labv.TestName}}</td>
+                <td>{{labv.HighRange}}</td>
+                <td>{{labv.LowRange}}</td>
+                <td>{{labv.NormalRange}}</td>
+            
+            </tr>
+           
+        </tbody>
+    </table>
+
+    <!-- <div class="footer">
+        <pagination-controls (pageChange)="page=($event)"></pagination-controls>
+    </div> -->
+</div>
+</body>

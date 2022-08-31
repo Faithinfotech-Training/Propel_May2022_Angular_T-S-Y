@@ -1,0 +1,55 @@
+<div class="cointainer">
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <form name="empform" #form="ngForm" autocomplete="false" (ngSubmit)="onSubmit(form)">
+                <div class="form-group">
+
+                    PatientID : {{Pid}}
+                    <br>
+                    PatientName : {{Patname}}
+                    <br>
+                    AppointmentId : {{apid}}
+                    <br>
+                  
+
+                    <input default="apid" name="AppointmentId"  [(ngModel)]="DiagnoseService.formData.AppointmentId" class="form-control">
+
+                    <label>Diagnosis</label>
+                    <input name="Diagnosis" #Diagnosis="ngModel" [(ngModel)]="DiagnoseService.formData.Diagnosis"
+                        class="form-control" placeholder="Enter Diagnosis details" minlength="3" maxlength="200">
+
+                </div>
+            </form>
+
+             
+
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-dark">Submit</button>
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a [routerLink]="['/labreportpatient']" class="btn btn-outline-secondary"
+            style="float:right; margin-bottom:10px;" (click) = "diagnoseHis(Pid)">Diagnose History</a><br><br><br>
+
+            <a [routerLink]="['/labreportpatient']" class="btn btn-outline-secondary"
+            style="float:right; margin-bottom:10px;"(click) = "MedicineHis(Pid)">Medicine History</a><br><br><br>
+            
+            <a [routerLink]="['/labreportpatient']" class="btn btn-outline-secondary"
+            style="float:right; margin-bottom:10px;" (click) = "LabtestHis(Pid)" >Lab Test History</a><br><br><br>
+
+            <a [routerLink]="['/labreportpatient']" class="btn btn-outline-secondary"
+            style="float:right; margin-bottom:10px;">view lab report</a>
+
+
+        </div>
+
+    </div>
+
+</div>

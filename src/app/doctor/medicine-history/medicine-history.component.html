@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead class="text-center">
+            <tr>
+                <th>Course</th>
+                <th>MedicineName</th>
+                <th> MedicineTiming1</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let medhis of medhis">
+                <td>{{medhis.Course}}</td>
+                <td>{{medhis.MedicineName}}</td>
+                <td>{{medhis.MedicineTiming1}}</td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+

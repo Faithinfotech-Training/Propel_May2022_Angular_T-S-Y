@@ -1,0 +1,28 @@
+<form name="empform" #form="ngForm" >
+
+
+    <div class="form-group">
+
+        <label>PrescriptionId</label>
+        <input name="PrescriptionId" #EmployeeName="ngModel" [(ngModel)]="preslab.formData.PrescriptionId"
+            class="form-control" placeholder="Enter ID" required>
+        <!-- [ngClass]="{'is-invalid':PrescriptionId.touched && PrescriptionId.Invalid }"> -->
+
+        <!-- <div class="validation-error" *ngIf="PrescriptionId.touched && PrescriptionId.Invalid ">
+            <div>FullName is required</div>
+        </div> -->
+    </div><br>
+
+    <!-- <div class="form-group">
+
+        <label>TestId</label>
+        <select name="DepartmentId" id="DepartmentId" #DepartmentId="ngModel"
+        [(ngModel)]="preslab.formData.DepartmentId" class="form-control" required
+       >
+        <option value="0" disabled>Choose any Options</option>
+        <option *ngFor="let dept of employeeService.departments" value="{{dept.DepartmentId}}">
+            {{dept.DepartmentName}}
+        </option>
+    </select> -->
+    <!-- </div> -->
+</form>

@@ -1,0 +1,51 @@
+<div class="container">
+
+    <h3>Login Page</h3>
+    <hr>
+
+    <form [formGroup]="loginForm" (ngSubmit)="loginCredentials()" class="formControls">
+
+        <!--Username -->
+        <div>
+            <p>
+                <label for="UserName" class="form-label">UserName</label><br>
+                <input type="text" class="form-control" placeholder="Enter username" name="UserName"
+                    formControlName="UserName" minlength="3"
+                    [ngClass]="{'is-invalid' : formControls.UserName.touched && formControls.UserName.invalid}">
+            </p>
+        </div>
+
+        <!--Username validation-->
+        <div *ngIf="isSubmitted && formControls.UserName.errors">
+            <div *ngIf="formControls.UserName.errors" style="color:red; text-align:left">
+                user name required...!
+            </div>
+        </div>
+
+
+        <!--PASSWORD -->
+        <div>
+            <p>
+                <label for="Password" class="form-label">Password</label><br>
+                <input type="text" class="form-control" placeholder="Enter Password" name="Password"
+                    formControlName="Password" minlength="3"
+                    [ngClass]="{'is-invalid' : formControls.Password.touched && formControls.Password.invalid}">
+            </p>
+        </div>
+
+        <!--password validation-->
+        <div *ngIf="isSubmitted && formControls.Password.errors">
+            <div *ngIf="formControls.Password.errors" style="color:red; text-align:left">
+                 password required ....!
+            </div>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" >Login</button>
+        </div>
+        <div *ngIf="errors" style="color: red; text-align:left">
+            {{errors}}
+        </div>
+    </form>
+
+</div>

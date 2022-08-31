@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead class="text-center">
+            <tr>
+                <th>CreatedDate</th>
+                <th>TestName</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let Labhis of Labhis">
+                <td>{{Labhis.CreatedDate}}</td>
+                <td>{{Labhis.TestName}}</td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+
